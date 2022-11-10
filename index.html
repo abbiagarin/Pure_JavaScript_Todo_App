@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/6c070dc7a8.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>TODO APP</title>
+</head>
+
+<body>
+    <div class="task__list-container">
+        <div class="column left__side">
+            <h3 class="left heading">Task To Do</h3>
+            <button class="create__btn" required type="submit">Create New Task </button>
+        </div>
+        <div class="column right__side">
+            <h3 class="right heading">Description</h3>
+
+            <div class="plus-icon">
+                <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="blur hidden"></div>
+    <form class="form hidden">
+        <h3 class="form-heading">Create New Task</h3>
+        <div class="form__group">
+            <input type="text" name="task" id="task" class="form__group-input">
+            <input type="submit" required value="Create" class="create__task-btn submit__btn" />
+            <input type="submit" required value="Cancel" class="create__task-btn cancel__btn" />
+            <small class="form__group-small"></small>
+        </div>
+    </form>
+
+    <form class="description__form hidden" id="description-form">
+        <h3 class="form-heading">Description</h3>
+        <div class="form__group">
+            <textarea name="text" id="text" cols="20" rows="2" class="desc__group-input"></textarea>
+            <small class="form__group-small"></small>
+            <label class="desc__label">Due Date</label>
+            <input type="date" name="desc" id="desc-date" class="desc__group-date"> <span class="calendar"><i
+                    class="fa fa-calendar" aria-hidden="true"></i></span>
+            <input type="submit" required value="Save" class="desc__btn save__btn" />
+            <input type="submit" required value="Cancel" class="desc__btn cancel__desc-btn" />
+        </div>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="home__column-container">
+        <div class="column left__side">
+            <button class="create__btn" required type="submit">Create New Task </button>
+        </div>
+        <div class="column right__side">
+            <h3 class="right__side-heading">Task To Do</h3>
+        </div>
+    </div> -->
+
+    <!-- <form class="form hidden">
+        <h3 class="create__task-heading">Create New Task</h3>
+        <div class="form__group">
+            <input type="text" name="task" id="task" class="form__group-input">
+            <input type="submit" required value="Create" class="create__task-btn submit__btn" />
+            <input type="submit" required value="Cancel" class="create__task-btn cancel__btn" />
+            <small class="form__group-small"></small>
+        </div>
+    </form> -->
+
+    <!-- <div class="blur hidden"></div>
+    <div class="task__list-container hidden">
+        <div class="column left__side">
+            <h3 class="left__side-heading">Task To Do</h3>
+            <div>
+                <p class="task">Task 1</p>
+            </div>
+            <div class="tasks__title">
+                <div class="title">
+                    <span>Going to the market.</span>
+                    <span class="options">
+                        <i class=" fas fa-trash-alt"></i>
+                    </span> <br />
+                    <span>2022-11-07</span>
+                </div>
+            </div>
+
+            <div class="tasks__title">
+                <div class="title">
+                    <span>Going to the market.</span>
+                    <span class="options">
+                        <i class=" fas fa-trash-alt"></i>
+                    </span> <br />
+                    <span>2022-11-07</span>
+                </div>
+            </div>
+
+            <div class="tasks__title">
+                <div class="title">
+                    <span>Going to the market.</span>
+                    <span class="options">
+                        <i class=" fas fa-trash-alt"></i>
+                    </span> <br />
+                    <span>2022-11-07</span>
+                </div>
+            </div>
+
+
+            <button class="create__btn" required type="submit">Create New Task </button>
+        </div>
+        <div class="column right__side">
+            <h3 class="right__side-heading">Description</h3>
+
+            <div class="plus-icon">
+                <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div> -->
+    <!-- 
+    <form class="description__form hidden" id="description-form">
+        <h3 class="desc__task-heading">Description</h3>
+        <div class="form__group">
+            <textarea name="text" id="text" cols="20" rows="5" class="desc__group-input"></textarea>
+            <small class="form__group-small"></small>
+            <p class="desc__label">Due Date</p>
+            <input type="date" name="desc" id="desc-date" class="desc__group-date"> <span class="calendar"><i
+                    class="fa fa-calendar" aria-hidden="true"></i></span>
+            <input type="submit" required value="Save" class="desc__btn save__btn" />
+            <input type="submit" required value="Cancel" class="desc__btn cancel__desc-btn" />
+        </div>
+
+    </form> -->
+
+
+    <script src="./JS/app.js"></script>
+</body>
+
+</html>

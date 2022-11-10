@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #07c7a4;
+  --secondary-clr: #ffffff;
+  --tetiary-clr: #dcf5e6;
+  --primary-lighter: #07d1ad;
+  --primary-darker: #0bc08a;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-color: var(--primary-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.task__list-container {
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(83, 81, 81, 0.5);
+  width: min(50em, 100% - 15rem);
+  display: flex;
+}
+
+.column {
+  padding: 20rem 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.left__side {
+  flex: 1;
+  background-color: var(--secondary-clr);
+  border-right: 2px solid var(--primary-lighter);
+}
+
+.right__side {
+  flex: 1.5;
+  background-color: var(--tetiary-clr);
+  position: relative;
+}
+
+.heading {
+  position: absolute;
+  top: 2rem;
+  color: var(--primary-clr);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+}
+
+.create__btn {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--primary-darker);
+  color: var(--secondary-clr);
+  background-color: var(--primary-darker);
+  cursor: pointer;
+}
+
+.plus-icon {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+  cursor: pointer;
+  color: var(--primary-darker);
+}
+
+.form,
+.description__form {
+  width: min(35em, 100% - 15rem);
+  padding: 1rem 3rem;
+  box-shadow: 0 0 10px 5px rgba(83, 81, 81, 0.5);
+  border-radius: 5px;
+  background-color: var(--secondary-clr);
+}
+
+#description-form {
+  z-index: 2;
+  position: absolute;
+  top: 50;
+  left: 50;
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  color: var(--primary-clr);
+  font-weight: 700;
+}
+
+.form__group {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  margin: 3rem 0;
+}
+
+.form__group-input {
+  padding: 1.5rem 1rem;
+  width: 75%;
+  border: 1px solid var(--primary-clr);
+  border-radius: 4px;
+  outline: none;
+}
+
+.desc__group-input {
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid var(--primary-clr);
+  border-radius: 4px;
+  outline: none;
+}
+.desc__label {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  color: var(--primary-darker);
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.desc__group-date {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--primary-clr);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  color: #000;
+  font-weight: bold;
+}
+
+.desc__group-date:focus {
+  outline: none;
+}
+
+.calendar i {
+  margin-left: -2.2rem;
+  color: var(--primary-clr);
+}
+
+.create__task-btn,
+.desc__btn {
+  padding: 1.5rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit__btn {
+  margin-left: -10.2rem;
+  background-color: var(--primary-clr);
+  color: var(--secondary-clr);
+}
+
+.cancel__btn {
+  color: var(--primary-clr);
+  background-color: var(--secondary-clr);
+}
+
+.desc__btn {
+  color: var(--primary-clr);
+  position: relative;
+  top: 3rem;
+  left: 15rem;
+  background-color: transparent;
+}
+
+.desc__btn:hover {
+  background-color: var(--primary-clr);
+  color: var(--secondary-clr);
+  opacity: 0.6;
+  transform: scale(1.01);
+}
+
+.submit__btn:hover {
+  opacity: 0.6;
+  transform: scale(1.01);
+}
+
+.cancel__btn:hover {
+  background-color: var(--primary-clr);
+  opacity: 0.6;
+  color: var(--secondary-clr);
+  transform: scale(1.01);
+}
+
+.hidden {
+  display: none;
+}
+
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.form__group-small {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.error {
+  border: 1.5px solid red;
+}
+
+.success {
+  border: 1.5px solid green;
+}
