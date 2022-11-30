@@ -8,193 +8,105 @@
     <script src="https://use.fontawesome.com/6c070dc7a8.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./CSS/style.css">
     <title>TODO APP</title>
 </head>
 
 <body>
-    <div class="task__list-container">
-        <div class="column left__side">
+    <div class="todo__container">
+        <div class="left__side">
             <h3 class="left heading">Task To Do</h3>
-            <button class="create__btn" required type="submit">Create New Task </button>
+            <div class="title__lists">
+                <!-- <div class="title__list">
+                    <span class="task_title">Study Javascript</span>
+                    <span class="options del__option"><i class=" fas fa-trash-alt"></i></span> <br>
+                    <span class=" task_date created_date">Created: 2022-11-11</span>
+                </div> -->
+            </div>
+            <div class="create__btn-wrapper">
+                <button class="create__btn" required type="submit">Create New Task </button>
+            </div>
         </div>
-        <div class="column right__side">
+        <div class="right__side">
             <h3 class="right heading">Description</h3>
-
-            <div class="plus-icon">
-                <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+            <div class="desc__lists  descrip">
+                <!-- <div class="desc__list">
+                    <div class="todo__desc-content-heading" data-id=${data.id}>
+                        <span class="todo__desc-heading">Coding</span>
+                        <span class="options del__option"><i class=" fas fa-trash-alt"></i></span>
+                        <span class="options edit__option"><i class="fas fa-edit"></i></span>
+                    </div>
+                    <div class="todo__desc-content">
+                        <p class="task__description">Coding</p>
+                        <p class="task_date due_date">Due Date: 27-11-11</p>
+                    </div>
+                </div> -->
+            </div>
+            <div class="plus__icon-wrapper">
+                <span class="material-symbols-outlined">
+                    add_circle
+                </span>
             </div>
         </div>
     </div>
-    <div class="blur hidden"></div>
-    <form class="form hidden">
+    </div>
+    <div class="overlay hidden"></div>
+    <!-- title modal -->
+    <form class="title__form hidden">
         <h3 class="form-heading">Create New Task</h3>
         <div class="form__group">
-            <input type="text" name="task" id="task" class="form__group-input">
-            <input type="submit" required value="Create" class="create__task-btn submit__btn" />
-            <input type="submit" required value="Cancel" class="create__task-btn cancel__btn" />
+            <input type="text" placeholder="Task Title" name="title" id="title" class="form__input form__group-input">
+
+            <input type="submit" required value="Create" class="create__task-btn submit__title--btn" />
+            <input type="submit" required value="Cancel" class="create__task-btn cancel__title--btn" />
             <small class="form__group-small"></small>
         </div>
     </form>
 
+    <!-- description modal -->
     <form class="description__form hidden" id="description-form">
         <h3 class="form-heading">Description</h3>
         <div class="form__group">
-            <textarea name="text" id="text" cols="20" rows="2" class="desc__group-input"></textarea>
-            <small class="form__group-small"></small>
-            <label class="desc__label">Due Date</label>
-            <input type="date" name="desc" id="desc-date" class="desc__group-date"> <span class="calendar"><i
+            <textarea name="text" placeholder="Task description" id="text" cols="20" rows="2"
+                class="form__input desc__group-input"></textarea>
+            <small class="form__group-small form__group-description"></small>
+
+            <input type="date" name="date" id="date" class="form__group-date"> <span class="calendar"><i
                     class="fa fa-calendar" aria-hidden="true"></i></span>
+
             <input type="submit" required value="Save" class="desc__btn save__btn" />
             <input type="submit" required value="Cancel" class="desc__btn cancel__desc-btn" />
         </div>
 
     </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="home__column-container">
-        <div class="column left__side">
-            <button class="create__btn" required type="submit">Create New Task </button>
-        </div>
-        <div class="column right__side">
-            <h3 class="right__side-heading">Task To Do</h3>
-        </div>
-    </div> -->
-
-    <!-- <form class="form hidden">
-        <h3 class="create__task-heading">Create New Task</h3>
+    <!-- update modal -->
+    <form class="edit__form hidden">
+        <h3 class="form-heading">Update Task</h3>
         <div class="form__group">
-            <input type="text" name="task" id="task" class="form__group-input">
-            <input type="submit" required value="Create" class="create__task-btn submit__btn" />
-            <input type="submit" required value="Cancel" class="create__task-btn cancel__btn" />
-            <small class="form__group-small"></small>
-        </div>
-    </form> -->
+            <input type="text" placeholder="Task Title" name="title" class=" form__input edit__group-input" />
+            <small class="form__group-small form__group-edit"></small>
 
-    <!-- <div class="blur hidden"></div>
-    <div class="task__list-container hidden">
-        <div class="column left__side">
-            <h3 class="left__side-heading">Task To Do</h3>
-            <div>
-                <p class="task">Task 1</p>
-            </div>
-            <div class="tasks__title">
-                <div class="title">
-                    <span>Going to the market.</span>
-                    <span class="options">
-                        <i class=" fas fa-trash-alt"></i>
-                    </span> <br />
-                    <span>2022-11-07</span>
-                </div>
-            </div>
+            <input type="hidden" placeholder="Task ID" name="title" class="updated-task-id" value="" />
 
-            <div class="tasks__title">
-                <div class="title">
-                    <span>Going to the market.</span>
-                    <span class="options">
-                        <i class=" fas fa-trash-alt"></i>
-                    </span> <br />
-                    <span>2022-11-07</span>
-                </div>
-            </div>
+            <textarea name="text" placeholder="Task description" id="text" cols="20" rows="2"
+                class="form__input edit__group-input"></textarea>
+            <small class="form__group-small form__group-edit"></small>
 
-            <div class="tasks__title">
-                <div class="title">
-                    <span>Going to the market.</span>
-                    <span class="options">
-                        <i class=" fas fa-trash-alt"></i>
-                    </span> <br />
-                    <span>2022-11-07</span>
-                </div>
-            </div>
-
-
-            <button class="create__btn" required type="submit">Create New Task </button>
-        </div>
-        <div class="column right__side">
-            <h3 class="right__side-heading">Description</h3>
-
-            <div class="plus-icon">
-                <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
-            </div>
-        </div>
-    </div> -->
-    <!-- 
-    <form class="description__form hidden" id="description-form">
-        <h3 class="desc__task-heading">Description</h3>
-        <div class="form__group">
-            <textarea name="text" id="text" cols="20" rows="5" class="desc__group-input"></textarea>
-            <small class="form__group-small"></small>
-            <p class="desc__label">Due Date</p>
-            <input type="date" name="desc" id="desc-date" class="desc__group-date"> <span class="calendar"><i
+            <input type="date" name="date" id="date" class="form__group-date"> <span class="calendar"><i
                     class="fa fa-calendar" aria-hidden="true"></i></span>
-            <input type="submit" required value="Save" class="desc__btn save__btn" />
-            <input type="submit" required value="Cancel" class="desc__btn cancel__desc-btn" />
+
+            <input type="submit" required value="Update" class="edit__btn update__btn" />
+            <input type="submit" required value="Cancel" class="edit__btn cancel__edit-btn" />
         </div>
 
-    </form> -->
+    </form>
 
 
-    <script src="./JS/app.js"></script>
+    <script src="./JS/constant.js"></script>
+    <script src="./JS/script.js"></script>
 </body>
 
 </html>
